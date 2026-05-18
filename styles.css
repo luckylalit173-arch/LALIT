@@ -1,28 +1,8 @@
-/* 
-===========================================
-COLOR CUSTOMIZATION GUIDE
-===========================================
-To change the color theme, simply modify the values below:
-
-Common Color Options:
-- Navy Blue & Gold: primary: #1a3a52, secondary: #d4af37
-- Purple & Pink: primary: #7c3aed, secondary: #ec4899
-- Green & Teal: primary: #065f46, secondary: #14b8a6
-- Red & Orange: primary: #7c2d12, secondary: #f97316
-- Dark Blue & Light Blue: primary: #0c4a6e, secondary: #0ea5e9
-
-Just paste your colors below and the entire site will update!
-===========================================
-*/
-
 /* CSS Variables for Easy Customization */
 :root {
-    /* ===== EDIT THESE COLORS ===== */
-    --primary-color: #8b4513;        /* Dark Brown - Main color */
-    --secondary-color: #a0522d;      /* Sienna - Gradient end */
-    --accent-color: #daa520;         /* Goldenrod - Highlights */
-    
-    /* Other colors (optional to change) */
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #f59e0b;
     --text-color: #1f2937;
     --light-gray: #f3f4f6;
     --border-color: #e5e7eb;
@@ -38,7 +18,7 @@ Just paste your colors below and the entire site will update!
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: #ffffff;
@@ -74,7 +54,6 @@ html {
 .nav-brand {
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .nav-menu {
@@ -88,7 +67,6 @@ html {
     text-decoration: none;
     transition: opacity 0.3s ease;
     font-weight: 500;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .nav-menu a:hover {
@@ -122,21 +100,18 @@ html {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .subtitle {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     opacity: 0.9;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .intro-text {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     opacity: 0.95;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Buttons */
@@ -150,7 +125,6 @@ html {
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .btn-primary {
@@ -159,7 +133,7 @@ html {
 }
 
 .btn-primary:hover {
-    background: #cd9d1e;
+    background: #d97706;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -176,7 +150,6 @@ section h2 {
     color: var(--primary-color);
     position: relative;
     padding-bottom: 1rem;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 section h2::after {
@@ -208,13 +181,41 @@ section h2::after {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     font-size: 1.3rem;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .about-text p {
     margin-bottom: 1rem;
     line-height: 1.8;
-    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Skills */
+.skills {
+    margin: 2rem 0;
+}
+
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.skill-bar {
+    background: var(--border-color);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
 }
 
 /* Education */
@@ -230,52 +231,12 @@ section h2::after {
 .education-item h4 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .education-date {
     color: var(--accent-color);
     font-weight: 600;
     font-size: 0.9rem;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-/* Skills - Updated to tag/badge style */
-.skills {
-    margin: 2rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.skill {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.skill:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.skill span {
-    display: inline;
-}
-
-.skill-bar {
-    display: none;
-}
-
-.skill-level {
-    display: none;
 }
 
 .about-image img {
@@ -321,21 +282,18 @@ section h2::after {
 .project-info h3 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .project-date {
     color: var(--accent-color);
     font-size: 0.9rem;
     font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .project-description {
     margin: 1rem 0;
     color: #6b7280;
     line-height: 1.6;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Tags */
@@ -354,7 +312,6 @@ section h2::after {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .project-link {
@@ -362,7 +319,6 @@ section h2::after {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .project-link:hover {
@@ -409,12 +365,10 @@ section h2::after {
     align-items: center;
     margin-bottom: 1rem;
     font-size: 0.85rem;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .blog-date {
     color: #9ca3af;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .blog-category {
@@ -423,21 +377,18 @@ section h2::after {
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .blog-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
     line-height: 1.4;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .blog-card p {
     color: #6b7280;
     margin-bottom: 1rem;
     line-height: 1.6;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .read-more {
@@ -445,16 +396,119 @@ section h2::after {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .read-more:hover {
     color: var(--primary-color);
 }
 
+/* Gallery Section */
+.gallery {
+    background: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 300px;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    filter: blur(4px) brightness(0.7);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-content {
+    color: white;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-content {
+    transform: translateY(0);
+}
+
+.gallery-overlay h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.gallery-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.gallery-arrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+
+.gallery-item:hover .gallery-arrow {
+    opacity: 1;
+    transform: scale(1);
+}
+
 /* Contact Section */
 .contact {
-    background: white;
+    background: var(--light-gray);
 }
 
 .contact-intro {
@@ -462,7 +516,6 @@ section h2::after {
     font-size: 1.1rem;
     margin-bottom: 3rem;
     color: #6b7280;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .contact-content {
@@ -473,7 +526,7 @@ section h2::after {
 
 /* Form */
 .contact-form {
-    background: var(--light-gray);
+    background: white;
     padding: 2rem;
     border-radius: 10px;
 }
@@ -488,7 +541,7 @@ section h2::after {
     padding: 0.75rem;
     border: 2px solid var(--border-color);
     border-radius: 5px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: inherit;
     font-size: 1rem;
     transition: border-color 0.3s ease;
 }
@@ -503,7 +556,6 @@ section h2::after {
 .contact-info h3 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .social-links {
@@ -535,17 +587,14 @@ section h2::after {
 
 .contact-details {
     color: #6b7280;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .contact-details p {
     margin-bottom: 1rem;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .contact-details strong {
     color: var(--text-color);
-    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Footer */
@@ -554,7 +603,6 @@ section h2::after {
     color: white;
     text-align: center;
     padding: 2rem var(--padding-base);
-    font-family: 'Times New Roman', Times, serif;
 }
 
 .footer i {
@@ -590,12 +638,13 @@ section h2::after {
     }
 
     .projects-grid,
-    .blog-grid {
+    .blog-grid,
+    .gallery-grid {
         grid-template-columns: 1fr;
     }
 
-    .skills {
-        justify-content: center;
+    .gallery-item {
+        height: 250px;
     }
 }
 
@@ -634,7 +683,15 @@ section h2::after {
         font-size: 1rem;
     }
 
-    .skills {
-        justify-content: center;
+    .gallery-item {
+        height: 200px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 1.1rem;
+    }
+
+    .gallery-overlay p {
+        font-size: 0.85rem;
     }
 }
