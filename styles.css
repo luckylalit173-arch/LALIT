@@ -22,6 +22,10 @@
     --spacing-medium: 1.5rem;
     --spacing-large: 2rem;
     --spacing-xl: 3rem;
+
+    /* Image Sizes - ADJUST HERE */
+    --about-image-width: 300px;
+    --about-image-height: 350px;
 }
 
 /* ============================================
@@ -216,8 +220,16 @@ section h2::after {
     color: var(--text-light);
 }
 
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .about-image img {
-    width: 100%;
+    width: var(--about-image-width);
+    height: var(--about-image-height);
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -629,6 +641,11 @@ section h2::after {
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 768px) {
+    :root {
+        --about-image-width: 250px;
+        --about-image-height: 300px;
+    }
+
     .nav-menu {
         gap: 1rem;
         font-size: 0.9rem;
@@ -666,6 +683,11 @@ section h2::after {
 }
 
 @media (max-width: 480px) {
+    :root {
+        --about-image-width: 200px;
+        --about-image-height: 250px;
+    }
+
     .navbar .container {
         flex-direction: column;
         gap: var(--spacing-base);
