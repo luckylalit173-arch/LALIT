@@ -204,7 +204,7 @@ section h2::after {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
-    align-items: justify;
+    align-items: center;
 }
 
 .about-text h3 {
